@@ -20,6 +20,4 @@ public class Order {
 	@ManyToOne
 	@JoinColumn(name = "client_id")  // chave estrangeira
 	private User client;
-	
-	
 }
