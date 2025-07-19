@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 @Entity
 @Table(name = "tb_user")
@@ -84,10 +85,29 @@ public class User {
 		return orders;
 	}
 	
+    // hashCode and equals
 	
-	// equals and hasCod  - code colocar 
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		User other = (User) obj;
+		return Objects.equals(id, other.id);
+	}
 	
-	// to String - pode colocar 
+	// to String
 	
-
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", name=" + name + ", email=" + email + ", phone=" + phone + ", birthDate="
+				+ birthDate + ", password=" + password + ", orders=" + orders + "]";
+	}
 }
