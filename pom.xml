@@ -11,10 +11,10 @@
 	</parent>
 	
 	<groupId>com.devsuperior</groupId>
-	<artifactId>desafio002</artifactId>
+	<artifactId>dscommerce</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>desafio002</name>
-	<description>Desafio-002 Devsuperior</description>
+	<name>dscommerce</name>
+	<description>DSCommerce Devsuperior</description>
 	<url/>
 	<licenses>
 		<license/>
